@@ -1,0 +1,5 @@
+.env
+cache/
+.fp_request_log.json
+__pycache__/
+*.pyc

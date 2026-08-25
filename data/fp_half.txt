@@ -1,0 +1,300 @@
+Jahmyr Gibbs|RB|DET
+Bijan Robinson|RB|ATL
+Ja'Marr Chase|WR|CIN
+Puka Nacua|WR|LAR
+Jaxon Smith-Njigba|WR|SEA
+Amon-Ra St. Brown|WR|DET
+Jonathan Taylor|RB|IND
+Christian McCaffrey|RB|SF
+CeeDee Lamb|WR|DAL
+James Cook III|RB|BUF
+Justin Jefferson|WR|MIN
+Drake London|WR|ATL
+Chase Brown|RB|CIN
+A.J. Brown|WR|NE
+Saquon Barkley|RB|PHI
+De'Von Achane|RB|MIA
+Nico Collins|WR|HOU
+Brock Bowers|TE|LV
+Omarion Hampton|RB|LAC
+Derrick Henry|RB|BAL
+Kenneth Walker III|RB|KC
+George Pickens|WR|DAL
+Ashton Jeanty|RB|LV
+Chris Olave|WR|NO
+Trey McBride|TE|ARI
+Josh Allen|QB|BUF
+Malik Nabers|WR|NYG
+Rashee Rice|WR|KC
+DeVonta Smith|WR|PHI
+Zay Flowers|WR|BAL
+Kyren Williams|RB|LAR
+Tee Higgins|WR|CIN
+Javonte Williams|RB|DAL
+Breece Hall|RB|NYJ
+Tetairoa McMillan|WR|CAR
+Lamar Jackson|QB|BAL
+Garrett Wilson|WR|NYJ
+Josh Jacobs|RB|GB
+Ladd McConkey|WR|LAC
+Jaylen Waddle|WR|DEN
+Emeka Egbuka|WR|TB
+Jeremiyah Love|RB|ARI
+Colston Loveland|TE|CHI
+Drake Maye|QB|NE
+Travis Etienne Jr.|RB|NO
+Terry McLaurin|WR|WAS
+Davante Adams|WR|LAR
+D'Andre Swift|RB|CHI
+Joe Burrow|QB|CIN
+Luther Burden III|WR|CHI
+Cam Skattebo|RB|NYG
+Tyler Warren|TE|IND
+Jameson Williams|WR|DET
+Bucky Irving|RB|TB
+Quinshon Judkins|RB|CLE
+DJ Moore|WR|BUF
+David Montgomery|RB|HOU
+Jayden Daniels|QB|WAS
+Christian Watson|WR|GB
+Mike Evans|WR|SF
+Rome Odunze|WR|CHI
+Jalen Hurts|QB|PHI
+Bhayshul Tuten|RB|JAC
+TreVeyon Henderson|RB|NE
+Jadarian Price|RB|SEA
+Parker Washington|WR|JAC
+Caleb Williams|QB|CHI
+Tucker Kraft|TE|GB
+Marvin Harrison Jr.|WR|ARI
+Carnell Tate|WR|TEN
+Rhamondre Stevenson|RB|NE
+Justin Herbert|QB|LAC
+Jaylen Warren|RB|PIT
+Trevor Lawrence|QB|JAC
+Brian Thomas Jr.|WR|JAC
+Dak Prescott|QB|DAL
+DK Metcalf|WR|PIT
+Tony Pollard|RB|TEN
+Harold Fannin Jr.|TE|CLE
+Sam LaPorta|TE|DET
+Chris Godwin Jr.|WR|TB
+Rico Dowdle|RB|PIT
+Kyle Pitts Sr.|TE|ATL
+Courtland Sutton|WR|DEN
+Jonathon Brooks|RB|CAR
+J.K. Dobbins|RB|DEN
+Michael Pittman Jr.|WR|PIT
+Michael Wilson|WR|ARI
+Quentin Johnston|WR|LAC
+Chuba Hubbard|RB|CAR
+Brock Purdy|QB|SF
+Blake Corum|RB|LAR
+Alec Pierce|WR|IND
+Jaxson Dart|QB|NYG
+George Kittle|TE|SF
+Josh Downs|WR|IND
+RJ Harvey|RB|DEN
+Patrick Mahomes II|QB|KC
+Jacory Croskey-Merritt|RB|WAS
+Stefon Diggs|WR|WAS
+Bo Nix|QB|DEN
+Wan'Dale Robinson|WR|TEN
+Travis Kelce|TE|KC
+Jordan Addison|WR|MIN
+Jordan Mason|RB|MIN
+Matthew Stafford|QB|LAR
+Jayden Reed|WR|GB
+Kenny Gainwell|RB|TB
+Kyle Monangai|RB|CHI
+Jakobi Meyers|WR|JAC
+Jared Goff|QB|DET
+Rachaad White|RB|WAS
+Dalton Kincaid|TE|BUF
+Makai Lemon|WR|PHI
+Aaron Jones Sr.|RB|MIN
+Dallas Goedert|TE|PHI
+Isaiah Likely|TE|NYG
+Baker Mayfield|QB|TB
+Kyler Murray|QB|MIN
+Jordan Love|QB|GB
+KC Concepcion|WR|CLE
+Mark Andrews|TE|BAL
+Xavier Worthy|WR|KC
+Chris Rodriguez Jr.|RB|JAC
+Matthew Golden|WR|GB
+Tyler Shough|QB|NO
+Jalen Coker|WR|CAR
+Woody Marks|RB|HOU
+Tyler Allgeier|RB|ARI
+Khalil Shakir|WR|BUF
+Jake Ferguson|TE|DAL
+Jordyn Tyson|WR|NO
+Romeo Doubs|WR|NE
+Tyjae Spears|RB|TEN
+Malik Willis|QB|MIA
+Deebo Samuel Sr.|WR|SF
+Juwan Johnson|TE|NO
+Keaton Mitchell|RB|LAC
+Tank Bigsby|RB|PHI
+Hunter Henry|TE|NE
+Sam Darnold|QB|SEA
+De'Zhaun Stribling|WR|SF
+Jonah Coleman|RB|DEN
+Zach Charbonnet|RB|SEA
+Tyrone Tracy Jr.|RB|NYG
+C.J. Stroud|QB|HOU
+Brenton Strange|TE|JAC
+Chig Okonkwo|TE|WAS
+Dylan Sampson|RB|CLE
+Alvin Kamara|RB|NO
+Rashid Shaheed|WR|SEA
+Daniel Jones|QB|IND
+Brian Robinson Jr.|RB|ATL
+Cam Ward|QB|TEN
+Isiah Pacheco|RB|DET
+Dalton Schultz|TE|HOU
+Adonai Mitchell|WR|NYJ
+Denzel Boston|WR|CLE
+Tre Tucker|WR|LV
+Braelon Allen|RB|NYJ
+Jauan Jennings|WR|MIN
+Jalen McMillan|WR|TB
+Jerry Jeudy|WR|CLE
+MarShawn Lloyd|RB|GB
+Mike Washington Jr.|RB|LV
+T.J. Hockenson|TE|MIN
+AJ Barner|TE|SEA
+Bryce Young|QB|CAR
+Dontayvion Wicks|WR|PHI
+Ray Davis|RB|BUF
+Oronde Gadsden II|TE|LAC
+Jalen Nailor|WR|LV
+Tre' Harris|WR|LAC
+Terrance Ferguson|TE|LAR
+Emmett Johnson|RB|KC
+Kayshon Boutte|WR|HOU
+Omar Cooper Jr.|WR|NYJ
+Jacoby Brissett|QB|ARI
+Pat Bryant|WR|DEN
+Ryan Flournoy|WR|DAL
+Sean Tucker|RB|TB
+Malik Washington|WR|MIA
+Kimani Vidal|RB|LAC
+Keenan Allen|WR|IND
+Kenyon Sadiq|TE|NYJ
+Tank Dell|WR|HOU
+Gunnar Helm|TE|TEN
+Calvin Ridley|WR|TEN
+Travis Hunter|WR|JAC
+Nicholas Singleton|RB|TEN
+Jaylin Noel|WR|HOU
+Houston Texans|DST|HOU
+Geno Smith|QB|NYJ
+Pat Freiermuth|TE|PIT
+Cade Otton|TE|TB
+Denver Broncos|DST|DEN
+Aaron Rodgers|QB|PIT
+Jaydon Blue|RB|DAL
+Seattle Seahawks|DST|SEA
+Kaytron Allen|RB|WAS
+Los Angeles Rams|DST|LAR
+Emanuel Wilson|RB|SEA
+Rashod Bateman|WR|BAL
+Isaac TeSlaa|WR|DET
+Philadelphia Eagles|DST|PHI
+Jacksonville Jaguars|DST|JAC
+James Conner|RB|ARI
+New England Patriots|DST|NE
+Pittsburgh Steelers|DST|PIT
+Brandon Aubrey|K|DAL
+Los Angeles Chargers|DST|LAC
+Minnesota Vikings|DST|MIN
+Cameron Dicker|K|LAC
+Ka'imi Fairbairn|K|HOU
+Darnell Mooney|WR|NYG
+Cam Little|K|JAC
+Troy Franklin|WR|DEN
+Cooper Kupp|WR|SEA
+George Holani|RB|SEA
+Kansas City Chiefs|DST|KC
+Baltimore Ravens|DST|BAL
+Jason Myers|K|SEA
+Tyler Loop|K|BAL
+Fernando Mendoza|QB|LV
+Colby Parkinson|TE|LAR
+David Njoku|TE|LAC
+Jaylen Wright|RB|MIA
+Eddy Pineiro|K|SF
+Jake Bates|K|DET
+Green Bay Packers|DST|GB
+Ollie Gordon II|RB|MIA
+Germie Bernard|WR|PIT
+Harrison Mevis|K|LAR
+Evan Engram|TE|DEN
+Devaughn Vele|WR|NO
+Cairo Santos|K|CHI
+Buffalo Bills|DST|BUF
+Detroit Lions|DST|DET
+Zachariah Branch|WR|ATL
+Malachi Fields|WR|NYG
+Tua Tagovailoa|QB|ATL
+Antonio Williams|WR|WAS
+Justice Hill|RB|BAL
+Chase McLaughlin|K|TB
+Kaelon Black|RB|SF
+Isaiah Davis|RB|NYJ
+Andy Borregales|K|NE
+Demond Claiborne|RB|MIN
+Jack Bech|WR|LV
+Evan McPherson|K|CIN
+Tory Horton|WR|SEA
+Najee Harris|RB|NYG
+Chris Brooks|RB|GB
+Keon Coleman|WR|BUF
+Elic Ayomanor|WR|TEN
+Harrison Butker|K|KC
+Ja'Kobi Lane|WR|BAL
+Jordan James|RB|SF
+Cleveland Browns|DST|CLE
+Ted Hurst III|WR|TB
+Samaje Perine|RB|CIN
+Ty Johnson|RB|BUF
+Chimere Dike|WR|TEN
+Chris Bell|WR|MIA
+Chris Boswell|K|PIT
+Michael Penix Jr.|QB|ATL
+LeQuint Allen Jr.|RB|JAC
+Wil Lutz|K|DEN
+Kirk Cousins|QB|LV
+Tyquan Thornton|WR|KC
+DJ Giddens|RB|IND
+Darius Slayton|WR|NYG
+Greg Dulcich|TE|MIA
+Christian Kirk|WR|SF
+Malik Davis|RB|DAL
+Mason Taylor|TE|NYJ
+Shedeur Sanders|QB|CLE
+Elijah Sarratt|WR|BAL
+Will Reichard|K|MIN
+Xavier Legette|WR|CAR
+Deshaun Watson|QB|CLE
+Theo Johnson|TE|NYG
+Seth McGowan|RB|IND
+Devin Neal|RB|NO
+Caleb Douglas|WR|MIA
+Marvin Mims Jr.|WR|DEN
+Adam Randall|RB|BAL
+Trey Benson|RB|FA
+Kendre Miller|RB|NO
+Eli Stowers|TE|PHI
+Brashard Smith|RB|KC
+San Francisco 49ers|DST|SF
+Emari Demercado|RB|KC
+Devin Singletary|RB|NYG
+Atlanta Falcons|DST|ATL
+Hollywood Brown|WR|PHI
+Trevor Etienne|RB|CAR
+Tahj Brooks|RB|CIN
+Cyrus Allen|WR|KC
+Mack Hollins|WR|NE

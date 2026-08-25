@@ -1,0 +1,300 @@
+J. Gibbs|RB|DET
+B. Robinson|RB|ATL
+J. Chase|WR|CIN
+P. Nacua|WR|LAR
+C. McCaffrey|RB|SF
+J. Taylor|RB|IND
+A. St. Brown|WR|DET
+J. Smith-Njigba|WR|SEA
+K. Walker III|RB|KC
+C. Lamb|WR|DAL
+D. Achane|RB|MIA
+S. Barkley|RB|PHI
+J. Cook III|RB|BUF
+C. Brown|RB|CIN
+D. Henry|RB|BAL
+J. Jefferson|WR|MIN
+N. Collins|WR|HOU
+B. Bowers|TE|LV
+M. Nabers|WR|NYG
+A.J. Brown|WR|NE
+D. London|WR|ATL
+G. Pickens|WR|DAL
+C. Olave|WR|NO
+O. Hampton|RB|LAC
+J. Love|RB|ARI
+B. Hall|RB|NYJ
+J. Allen|QB|BUF
+J. Waddle|WR|DEN
+D. Smith|WR|PHI
+T. Higgins|WR|CIN
+T. McMillan|WR|CAR
+T. Etienne Jr.|RB|NO
+J. Williams|RB|DAL
+K. Williams|RB|LAR
+J. Jacobs|RB|GB
+A. Jeanty|RB|LV
+Z. Flowers|WR|BAL
+C. Loveland|TE|CHI
+T. McBride|TE|ARI
+G. Wilson|WR|NYJ
+E. Egbuka|WR|TB
+L. McConkey|WR|LAC
+R. Rice|WR|KC
+D. Swift|RB|CHI
+R. Odunze|WR|CHI
+P. Washington|WR|JAC
+DJ Moore|WR|BUF
+J. Williams|WR|DET
+C. Skattebo|RB|NYG
+C. Watson|WR|GB
+L. Burden III|WR|CHI
+T. McLaurin|WR|WAS
+Q. Judkins|RB|CLE
+L. Jackson|QB|BAL
+M. Evans|WR|SF
+D. Adams|WR|LAR
+J. Price|RB|SEA
+B. Irving|RB|TB
+J. Hurts|QB|PHI
+J. Burrow|QB|CIN
+D. Maye|QB|NE
+J. Daniels|QB|WAS
+D. Montgomery|RB|HOU
+B. Tuten|RB|JAC
+J. Warren|RB|PIT
+R. Stevenson|RB|NE
+T. Warren|TE|IND
+S. LaPorta|TE|DET
+T. Kraft|TE|GB
+C. Williams|QB|CHI
+D. Prescott|QB|DAL
+M. Harrison Jr.|WR|ARI
+C. Hubbard|RB|CAR
+J.K. Dobbins|RB|DEN
+T. Henderson|RB|NE
+M. Golden|WR|GB
+J. Addison|WR|MIN
+B. Thomas Jr.|WR|JAC
+J. Herbert|QB|LAC
+K. Pitts Sr.|TE|ATL
+T. Pollard|RB|TEN
+J. Croskey-Merritt|RB|WAS
+KC Concepcion|WR|CLE
+DK Metcalf|WR|PIT
+C. Tate|WR|TEN
+M. Lemon|WR|PHI
+J. Brooks|RB|CAR
+H. Fannin Jr.|TE|CLE
+Q. Johnston|WR|LAC
+C. Sutton|WR|DEN
+M. Wilson|WR|ARI
+B. Corum|RB|LAR
+R. Dowdle|RB|PIT
+J. Downs|WR|IND
+J. Reed|WR|GB
+D. Stribling|WR|SF
+S. Diggs|WR|WAS
+C. Godwin Jr.|WR|TB
+Bo Nix|QB|DEN
+T. Lawrence|QB|JAC
+K. Murray|QB|MIN
+M. Stafford|QB|LAR
+B. Purdy|QB|SF
+D. Kincaid|TE|BUF
+G. Kittle|TE|SF
+D. Goedert|TE|PHI
+I. Likely|TE|NYG
+K. Mitchell|RB|LAC
+K. Fairbairn|K|HOU
+B. Aubrey|K|DAL
+X. Worthy|WR|KC
+R. Doubs|WR|NE
+A. Pierce|WR|IND
+M. Pittman Jr.|WR|PIT
+R. White|RB|WAS
+J. Mason|RB|MIN
+M. Washington Jr.|RB|LV
+C. Rodriguez Jr.|RB|JAC
+HOU|DST|HOU
+LAR|DST|LAR
+J. Love|QB|GB
+J. Goff|QB|DET
+J. Dart|QB|NYG
+T. Kelce|TE|KC
+K. Monangai|RB|CHI
+W. Marks|RB|HOU
+RJ Harvey|RB|DEN
+J. Coker|WR|CAR
+W. Robinson|WR|TEN
+D. Boston|WR|CLE
+M. Andrews|TE|BAL
+K. Gainwell|RB|TB
+A. Jones Sr.|RB|MIN
+PHI|DST|PHI
+SEA|DST|SEA
+C. Dicker|K|LAC
+J. Myers|K|SEA
+DEN|DST|DEN
+B. Mayfield|QB|TB
+P. Mahomes II|QB|KC
+M. Willis|QB|MIA
+J. Johnson|TE|NO
+T. Spears|RB|TEN
+J. Tyson|WR|NO
+R. Shaheed|WR|SEA
+K. Shakir|WR|BUF
+J. Meyers|WR|JAC
+K. Allen|WR|IND
+T. Tucker|WR|LV
+JAC|DST|JAC
+MIN|DST|MIN
+PIT|DST|PIT
+C. Little|K|JAC
+T. Loop|K|BAL
+J. Ferguson|TE|DAL
+D. Schultz|TE|HOU
+T. Bigsby|RB|PHI
+M. Lloyd|RB|GB
+W. Reichard|K|MIN
+BAL|DST|BAL
+T. Allgeier|RB|ARI
+Z. Charbonnet|RB|SEA
+T. Hunter|WR|JAC
+J. McMillan|WR|TB
+K. Boutte|WR|HOU
+D. Wicks|WR|PHI
+A. Mitchell|WR|NYJ
+J. Lane|WR|BAL
+T. Ferguson|TE|LAR
+R. Davis|RB|BUF
+B. Robinson Jr.|RB|ATL
+NE|DST|NE
+DAL|DST|DAL
+C. Santos|K|CHI
+E. McPherson|K|CIN
+E. Pineiro|K|SF
+W. Lutz|K|DEN
+B. Allen|RB|NYJ
+J. Coleman|RB|DEN
+AJ Barner|TE|SEA
+C. Okonkwo|TE|WAS
+T. Harris|WR|LAC
+D. Samuel Sr.|WR|SF
+O. Cooper Jr.|WR|NYJ
+P. Bryant|WR|DEN
+C. Bell|WR|MIA
+T. Shough|QB|NO
+S. Darnold|QB|SEA
+C.J. Stroud|QB|HOU
+B. Strange|TE|JAC
+H. Henry|TE|NE
+LAC|DST|LAC
+GB|DST|GB
+J. Bates|K|DET
+F. Mendoza|QB|LV
+B. Young|QB|CAR
+D. Jones|QB|IND
+J. Blue|RB|DAL
+D. Sampson|RB|CLE
+H. Mevis|K|LAR
+KC|DST|KC
+CIN|DST|CIN
+E. Johnson|RB|KC
+K. Black|RB|SF
+T.J. Hockenson|TE|MIN
+C. Parkinson|TE|LAR
+G. Dulcich|TE|MIA
+K. Sadiq|TE|NYJ
+C. Kolar|TE|LAC
+G. Smith|QB|NYJ
+A. Rodgers|QB|PIT
+R. Flournoy|WR|DAL
+J. Nailor|WR|LV
+C. Douglas|WR|MIA
+M. Fields|WR|NYG
+R. Bateman|WR|BAL
+K. Coleman|WR|BUF
+C. Allen|WR|KC
+J. Jennings|WR|MIN
+D. Vele|WR|NO
+J. Noel|WR|HOU
+C. Ridley|WR|TEN
+T. Burks|WR|WAS
+C. McLaughlin|K|TB
+T. Smack|K|GB
+TB|DST|TB
+NYG|DST|NYG
+SF|DST|SF
+C. Ward|QB|TEN
+A. Kamara|RB|NO
+N. Harris|RB|NYG
+S. Perine|RB|CIN
+J. Dotson|WR|ATL
+G. Bernard|WR|PIT
+J. Jeudy|WR|CLE
+M. Washington|WR|MIA
+D. Slayton|WR|NYG
+C. Kupp|WR|SEA
+I. Pacheco|RB|DET
+K. Allen|RB|WAS
+S. McGowan|RB|IND
+S. Tucker|RB|TB
+C. Boswell|K|PIT
+A. Borregales|K|NE
+CLE|DST|CLE
+TEN|DST|TEN
+BUF|DST|BUF
+NO|DST|NO
+IND|DST|IND
+E. Engram|TE|DEN
+C. Otton|TE|TB
+P. Freiermuth|TE|PIT
+J. Brissett|QB|ARI
+D. Watson|QB|CLE
+T. Tagovailoa|QB|ATL
+T. Tracy Jr.|RB|NYG
+J. Conner|RB|ARI
+I. TeSlaa|WR|DET
+Z. Branch|WR|ATL
+K. Cousins|QB|LV
+M. Penix Jr.|QB|ATL
+G. Helm|TE|TEN
+M. Taylor|TE|NYJ
+O. Gadsden II|TE|LAC
+D. Njoku|TE|LAC
+M. Gesicki|TE|CIN
+J. Bech|WR|LV
+A. Iosivas|WR|CIN
+T. Thornton|WR|KC
+C. Austin III|WR|NYG
+L. McCaffrey|WR|WAS
+J. Hill|RB|BAL
+K. Vidal|RB|LAC
+G. Holani|RB|SEA
+T. Hurst III|WR|TB
+T. Dell|WR|HOU
+D. Mooney|WR|NYG
+D. Washington|TE|PIT
+E. All Jr.|TE|CIN
+J. James|RB|SF
+E. Demercado|RB|KC
+DJ Giddens|RB|IND
+E. Wilson|RB|SEA
+L. Allen Jr.|RB|JAC
+O. Gordon II|RB|MIA
+A. Williams|WR|WAS
+E. Sarratt|WR|BAL
+I. Davis|RB|NYJ
+N. Singleton|RB|TEN
+C. Brooks|RB|GB
+E. Ayomanor|WR|TEN
+T. Horton|WR|SEA
+M. Mims Jr.|WR|DEN
+DET|DST|DET
+M. Hollins|WR|NE
+H. Butker|K|KC
+K. Bourne|WR|ARI
+J. Tolbert|WR|MIA
+B. Aiyuk|WR|SF
+X. Legette|WR|CAR
