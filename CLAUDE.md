@@ -40,14 +40,26 @@ python3 scripts/build_four.py    # the four PDFs
 python3 scripts/build_xlsx3.py   # the workbook
 ```
 
-Outputs land in `/mnt/user-data/outputs` in the original environment — change
-those paths to `output/` when running locally.
+Outputs land in `output/`. `scripts/audit.py` after any change; it must end
+`TOTAL PROBLEMS: 0`.
 
-## The next job: go live against the APIs
+## Live API layer (built, awaiting a network that can reach the APIs)
 
-The previous environment could not reach either API (sandbox network
-allowlist + no custom-header support). A local machine can. Replace the
-static files in `data/` with live pulls.
+`scripts/fpapi.py` is the fetch layer (per-day cache in `cache/`, persistent
+request counter in `.fp_request_log.json` that hard-stops at `FP_DAILY_BUDGET`);
+`scripts/fetch_live.py` orchestrates the pulls and rewrites `data/fp_*.txt`
+plus a `data/fp_meta.json` sidecar (ECR, rank_std, ADP, bye, Sleeper trending
+keyed by `mkey()`). The pipeline picks the sidecar up automatically: without
+it the build is the original static blend, with it the deliverables grow the
+ECR−ADP column, the rank_std disagreement flag, and trending markers.
+Sequence: `fpapi.py verify` (1 request, discovers which base URL the key
+accepts), then `fetch_live.py` (3 more on a cold cache), then the pipeline.
+`test_fpapi.py` and `test_fetch_live.py` exercise all of it offline.
+
+Sleeper names sometimes omit generational suffixes, which makes a suffixless
+Brian Robinson key identical to Bijan's. Trending attribution therefore drops
+any ambiguous key on either side — a missing hype flag is fine, a wrong one
+is not — and trending never enters the consensus.
 
 ### FantasyPros
 
@@ -176,9 +188,12 @@ its largest internal gap:
   at a position, which is the actual reach signal.
 
 **Disagreement flag.** Threshold is the 85th percentile of spread among
-draft-relevant skill players — currently 42. Players ranked by only one
-source get `·1`, never the gold flag: unknown spread is not high spread.
-Recompute the threshold when a source is added.
+draft-relevant skill players — computed in `agg_three.py` and stored in
+`consensus.json` so the PDFs and workbook can't drift (currently 40; an
+earlier draft of this doc said 42, the shipped PDFs always said 40). With
+live data the flag reads `rank_std` instead, same 85th-percentile rule.
+Players ranked by only one source get `·1`, never the gold flag: unknown
+spread is not high spread. Recompute the threshold when a source is added.
 
 **K/DST caveat.** The sources split on *philosophy* rather than talent for
 kickers and defenses — Norris buries them, Winks slots them by projected

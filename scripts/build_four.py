@@ -4,9 +4,10 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.colors import HexColor
 
+import os
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / "output"
-D = json.load(open(ROOT / "data" / "consensus.json"))
+OUT = Path(os.environ.get("FF_OUTPUT_DIR", ROOT / "output"))
+D = json.load(open(Path(os.environ.get("FF_DATA_DIR", ROOT / "data")) / "consensus.json"))
 W, H = letter
 M = 22
 INK = HexColor("#15181F")
@@ -18,16 +19,39 @@ POS_C = {"QB": "#C97A16", "RB": "#1F8A55", "WR": "#2360A5", "TE": "#B03A6B",
          "K": "#5B48A8", "DST": "#1D7E77"}
 SRCS = ["Winks", "Norris", "FantasyPros"]
 
-# flag threshold: top ~15% most-divided among draft-relevant skill players
-pool = [r["spread"] for r in D["half"]["rows"][:200] if r["pos"] not in ("K", "DST")]
-FLAG = round(statistics.quantiles(pool, n=20)[16])
-print("disagreement flag threshold:", FLAG)
+# flag thresholds come from agg_three now (85th pct among draft-relevant
+# skill players) so the PDFs and the workbook can never drift apart
+FLAG = D["flag"]["spread"]
+STD_T = D["flag"].get("std")          # present only with live FantasyPros data
+FP_INFO = D.get("fp_info")            # ditto
+HAS_ADP = any(r.get("delta") is not None for r in D["half"]["rows"])
+HAS_TREND = any(r.get("trend_add") is not None for r in D["half"]["rows"])
+print("disagreement flag threshold:", FLAG, f"(rank_std: {STD_T})" if STD_T else "")
 
 
 def spread_of(r):
     """Disagreement only means something with 2+ sources. A player just one
     source ranked has unknown spread, not high spread - never flag them."""
     return r["spread"] if r["n"] > 1 else -1
+
+
+def hot(r):
+    """With live data the flag reads rank_std - dispersion across the full
+    expert pool - instead of the 3-source spread. No std (FP never ranked
+    them) falls back to the spread rule; unknown spread still never flags."""
+    if STD_T is not None and r.get("std") is not None:
+        return r["std"] >= STD_T
+    return spread_of(r) >= FLAG
+
+
+def trending(r):
+    return r.get("trend_add") is not None
+
+
+def fp_vintage():
+    if FP_INFO:
+        return f"FantasyPros ECR as of {FP_INFO['last_updated']} ({FP_INFO['experts']} experts), full list via API."
+    return "FantasyPros ECR as of Aug 25 2026, top 300 only."
 
 
 def header(c, title, sub1, sub2):
@@ -54,7 +78,9 @@ def cheat_page(c, fmt, title):
     header(c, title,
            "Consensus of Hayden Winks + Josh Norris (Yahoo) + FantasyPros ECR, with FantasyPros weighted double. "
            "Number is the overall consensus rank.",
-           f"\u2022 marks a player the sources place {FLAG}+ ranks apart \u2014 no real consensus, so it's your call. Rules between names are tier breaks.")
+           (f"\u2022 marks a player the experts genuinely split on (rank_std {STD_T}+) \u2014 no real consensus, so it's your call. Rules between names are tier breaks."
+            if STD_T is not None else
+            f"\u2022 marks a player the sources place {FLAG}+ ranks apart \u2014 no real consensus, so it's your call. Rules between names are tier breaks."))
 
     def demand(pos, depth):
         pl = bypos[pos][:depth]
@@ -89,7 +115,8 @@ def cheat_page(c, fmt, title):
             c.setFont("Helvetica-Bold" if p["ptier"] <= 2 else "Helvetica", 6.9)
             c.drawString(x + 17, y, (p["team"] if pos == "DST" else p["name"])[:23])
             c.setFont("Helvetica", 6.0); c.setFillColor(GREY)
-            tail = ("\u2022 " if spread_of(p) >= FLAG else "") + ("" if pos == "DST" else p["team"])
+            tail = (("\u2022 " if hot(p) else "") + ("\u00bb " if trending(p) else "")
+                    + ("" if pos == "DST" else p["team"]))
             c.drawRightString(x + colw - 2, y, tail)
             y -= ROW
         return y
@@ -127,19 +154,25 @@ def cheat_page(c, fmt, title):
     c.setFillColor(GREY); c.setFont("Helvetica", 6.4)
     c.drawString(M, BODY_BOT - 15,
         "Tiers are positional, not overall \u2014 inside a tier the sources see the players as roughly interchangeable, so take need over rank.")
-    c.drawString(M, BODY_BOT - 23,
-        "A tier about to empty out is the real signal to reach. K and D/ST are where the sources split on philosophy rather than talent \u2014 order of preference only.")
+    line2 = "A tier about to empty out is the real signal to reach. K and D/ST are where the sources split on philosophy rather than talent \u2014 order of preference only."
+    if HAS_TREND:
+        line2 += "  \u00bb = hot on Sleeper adds \u2014 attention, not value."
+    c.drawString(M, BODY_BOT - 23, line2)
     c.setFont("Helvetica-Oblique", 6.4)
-    c.drawString(M, BODY_BOT - 31, "Three-source consensus computed from your own lists. FantasyPros ECR as of Aug 25 2026, top 300 only.")
+    c.drawString(M, BODY_BOT - 31, "Three-source consensus computed from your own lists. " + fp_vintage())
 
 
 # ---------------------------------------------------------------- straight list
 def list_page(c, fmt, title, depth=300):
     rows = D[fmt]["rows"][:depth]
+    sub2 = "A wide range means the sources disagree. Thinly-covered players are marked \u00b71 rather than given a false range."
+    if HAS_ADP:
+        sub2 = ("\u00b1ADP: expert rank minus room ADP \u2014 green falls to you (value), red is a reach. "
+                "Wide range = the sources disagree; \u00b71 = only one source ranked them.")
     header(c, title,
            "Straight consensus order: Winks + Norris + FantasyPros ECR (double-weighted). "
            "'Range' is the highest and lowest rank any single source gave.",
-           "A wide range means the sources disagree. Thinly-covered players are marked \u00b71 rather than given a false range.")
+           sub2)
 
     ncol = 3
     colw = (W - 2 * M - (ncol - 1) * 10) / ncol
@@ -153,10 +186,14 @@ def list_page(c, fmt, title, depth=300):
         y = top
         # column head
         c.setFillColor(HexColor("#3B4250")); c.rect(x, y, colw, 11, stroke=0, fill=1)
+        # with live ADP data a \u00b1ADP column squeezes in; positions shift left a touch
+        pos_x, team_x, name_max = (65, 51, 23) if HAS_ADP else (47, 33, 26)
         c.setFillColor(HexColor("#FFFFFF")); c.setFont("Helvetica-Bold", 6.2)
         c.drawString(x + 4, y + 3.2, "#")
         c.drawString(x + 22, y + 3.2, "PLAYER")
-        c.drawRightString(x + colw - 44, y + 3.2, "POS")
+        c.drawRightString(x + colw - (62 if HAS_ADP else 44), y + 3.2, "POS")
+        if HAS_ADP:
+            c.drawRightString(x + colw - 30, y + 3.2, "\u00b1ADP")
         c.drawRightString(x + colw - 3, y + 3.2, "RANGE")
         y -= 9
         for i, p in enumerate(chunk):
@@ -168,23 +205,37 @@ def list_page(c, fmt, title, depth=300):
             c.drawRightString(x + 15, yy, str(p["overall"]))
             c.setFillColor(INK); c.setFont("Helvetica", 6.8)
             nm = p["team"] + " D/ST" if p["pos"] == "DST" else p["name"]
-            c.drawString(x + 19, yy, nm[:26])
+            c.drawString(x + 19, yy, nm[:name_max])
             c.setFillColor(HexColor(POS_C[p["pos"]])); c.setFont("Helvetica-Bold", 6.0)
-            c.drawRightString(x + colw - 47, yy, f'{p["pos"]}{p["posrank"]}')
+            c.drawRightString(x + colw - pos_x, yy, f'{p["pos"]}{p["posrank"]}')
             c.setFillColor(FAINT); c.setFont("Helvetica", 5.6)
-            c.drawRightString(x + colw - 33, yy, "" if p["pos"] == "DST" else p["team"])
-            hot = spread_of(p) >= FLAG
+            c.drawRightString(x + colw - team_x, yy, "" if p["pos"] == "DST" else p["team"])
+            if HAS_ADP:
+                d = p.get("delta")
+                if d is not None:
+                    col = (HexColor("#1F8A55") if d <= -5
+                           else HexColor("#A83232") if d >= 5 else FAINT)
+                    c.setFillColor(col)
+                    c.setFont("Helvetica-Bold" if abs(d) >= 5 else "Helvetica", 5.6)
+                    c.drawRightString(x + colw - 30, yy, f"{d:+d}")
+            is_hot = hot(p)
             rng = f'{p["best"]}\u2013{p["worst"]}' if p["n"] > 1 else f'{p["best"]} \u00b71'
-            c.setFillColor(HexColor("#B8860B") if hot else (FAINT if p["n"] == 1 else GREY))
-            c.setFont("Helvetica-Bold" if hot else "Helvetica", 5.9)
+            c.setFillColor(HexColor("#B8860B") if is_hot else (FAINT if p["n"] == 1 else GREY))
+            c.setFont("Helvetica-Bold" if is_hot else "Helvetica", 5.9)
             c.drawRightString(x + colw - 3, yy, rng)
 
     c.setStrokeColor(RULE); c.setLineWidth(0.5)
     c.line(M, bot - 8, W - M, bot - 8)
     c.setFillColor(GREY); c.setFont("Helvetica", 6.4)
-    c.drawString(M, bot - 17, f"Gold ranges differ by {FLAG}+ \u2014 the sources genuinely disagree and the pick is a judgment call.  \u00b71 means only one source ranked them, so there is no consensus to read.")
+    if STD_T is not None:
+        gold = (f"Gold marks a rank_std of {STD_T}+ \u2014 the full FantasyPros expert pool genuinely disagrees "
+                f"and the pick is a judgment call.  \u00b71 means only one source ranked them.")
+    else:
+        gold = (f"Gold ranges differ by {FLAG}+ \u2014 the sources genuinely disagree and the pick is a judgment call.  "
+                f"\u00b71 means only one source ranked them, so there is no consensus to read.")
+    c.drawString(M, bot - 17, gold)
     c.setFont("Helvetica-Oblique", 6.4)
-    c.drawString(M, bot - 25, "Three-source consensus computed from your own lists. FantasyPros ECR as of Aug 25 2026, top 300 only.")
+    c.drawString(M, bot - 25, "Three-source consensus computed from your own lists. " + fp_vintage())
 
 
 jobs = [

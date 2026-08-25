@@ -1,7 +1,8 @@
-import json, re
+import json, os, re
 from pathlib import Path
 
-CONSENSUS = Path(__file__).resolve().parent.parent / "data" / "consensus.json"
+_DATA = Path(os.environ.get("FF_DATA_DIR", Path(__file__).resolve().parent.parent / "data"))
+CONSENSUS = _DATA / "consensus.json"
 
 # Full names for players FantasyPros ranks past its top 300, so only the
 # abbreviated Yahoo spelling survived the merge. Sourced from the FantasyPros

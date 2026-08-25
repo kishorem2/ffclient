@@ -2,8 +2,9 @@ import json, re, unicodedata
 from collections import defaultdict
 from pathlib import Path
 
+import os
 ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / "data"
+DATA = Path(os.environ.get("FF_DATA_DIR", ROOT / "data"))
 D = json.load(open(DATA / "consensus.json"))
 FILES = {
     "half": {"Winks": "winks_half.txt", "Norris": "norris_half.txt", "FantasyPros": "fp_half.txt"},
